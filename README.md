@@ -1,4 +1,4 @@
-# DEVENV for DGX
+# Docker-based colab development environment
 
 Quick and dirty deep learing environment in Docker for a shared DGX type of 
 server.
