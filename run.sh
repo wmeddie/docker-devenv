@@ -66,5 +66,5 @@ sudo docker run \
     -d \
     -p ${port}:8888 \
     -v ${data_dir}:/data/ \
-    --name ${name}_gpu_${gpu_numbers} \
+    --name ${name}_gpu_$(echo $gpu_numbers | tr , _) \
     local/devenv-${name}:0.1
