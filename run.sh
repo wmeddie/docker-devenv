@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+#set -euo pipefail
 
 gpu_numbers=0
 name=
@@ -60,9 +60,9 @@ then
     exit 1
 fi
 
+    #--runtime=nvidia \
 sudo docker run \
-    --runtime=nvidia \
-    -e NVIDIA_VISIBLE_DEVICES=${gpu_numbers} \
+    --gpus 'device='${gpu_numbers} \
     -d \
     -p ${port}:8888 \
     -v ${data_dir}:/data/ \
