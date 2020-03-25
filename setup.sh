@@ -3,12 +3,6 @@ set -euo pipefail
 
 # Fix CuDNN by monkeypatching this link...
 ln -s /usr/local/cuda /usr/local/nvidia
-
-# Add Java for java/scala notebooks.
-apt-get update
-apt-get install -y openjdk-8-jdk
-apt-get clean
-rm -rf /var/lib/apt/lists/*
   
 pip install beakerx==1.4.1
 pip install ipywidgets==7.5.1
