@@ -5,7 +5,7 @@ WORKDIR /srv/app
 COPY setup.sh ./
 
 RUN apt-get update \
-  && apt-get install -y python3-pip python3-dev nodejs npm\
+  && apt-get install -y python3-pip python3-dev nodejs npm openjdk-8-jdk \
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
   && ln -s /usr/bin/pip3 pip \
